@@ -20,7 +20,11 @@ $fileName = $firstName . "_" . $lastName . "_" . $course . "_" . date("Y-m-d_H-i
   $subject = "File Uploaded";
   $message = "A file has been uploaded and is available at this link: " . $fileDestination;
   $headers = "From: no-reply@aolccbc.com\r\n";
-  mail($to, $subject, $message, $headers);
+  if (mail($to, $subject, $message, $headers)) {
+    echo "Email sent successfully.";
+} else {
+    echo "Email sending failed.";
+}
   
   $ch = curl_init($webhook);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
