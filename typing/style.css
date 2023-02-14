@@ -1,0 +1,16 @@
+.logo
+    {
+        width: 300px;
+    }
+
+aside {
+    font-style: italic;
+    font-weight: bold;
+}
+
+aside ul {
+    font-weight:lighter;
+}
+aside ul i {
+    font-weight:bold;
+}
